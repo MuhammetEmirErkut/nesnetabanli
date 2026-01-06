@@ -26,6 +26,9 @@ public class DogDoorSimulator {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        remote.pressButton();
+        
         System.out.println("\nCeyhun stuck outside...");
 
         System.out.println("Ceyhun starts barking.");

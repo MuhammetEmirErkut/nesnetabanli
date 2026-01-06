@@ -22,8 +22,7 @@ public class Inventory {
     }
 
     public Instrument get(String serialNumber) {
-        for(Iterator<Instrument> i = inventory.iterator(); i.hasNext();) {
-            Instrument instrument = i.next();
+        for(Instrument instrument : inventory) {
             if (instrument.getSerialNumber().equals(serialNumber)) {
                 return instrument;
             }
