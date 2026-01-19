@@ -34,8 +34,7 @@ public abstract class Coffee {
     }
 
     public double calculatePrice() {
-        double total = basePrice;
-        total += sizeBehavior.getPriceMultiplier() * basePrice;
+        double total = basePrice * sizeBehavior.getPriceMultiplier();
         for (Addon addon : addons) {
             total += addon.getPrice();
         }
