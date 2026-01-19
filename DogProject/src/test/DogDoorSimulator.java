@@ -6,8 +6,6 @@ import DogProject.src.model.DogDoor;
 import DogProject.src.model.Remote;
 
 public class DogDoorSimulator {
-    
-
     public static void main(String[] args) {
         DogDoor door = new DogDoor();
         
