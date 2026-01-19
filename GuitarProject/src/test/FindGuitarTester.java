@@ -11,12 +11,13 @@ import GuitarProject.src.model.MandolinSpec;
 import GuitarProject.src.model.Style;
 import GuitarProject.src.model.Type;
 import GuitarProject.src.model.Wood;
+import GuitarProject.src.model.InstrumentSpec;
 
 public class FindGuitarTester {
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
         initializeInventory(inventory);
-        GuitarSpec whatErinLikes = new GuitarSpec(Builder.FENDER, "Stratocaster", Type.ELECTRIC, Wood.ALDER, Wood.ALDER, 6);
+        InstrumentSpec whatErinLikes = new GuitarSpec(Builder.FENDER, "Stratocaster", Type.ELECTRIC, Wood.ALDER, Wood.ALDER, 6);
         List<Instrument> matchingInstruments = inventory.search(whatErinLikes);
         if (matchingInstruments.size() > 0) {
             System.out.println("Erin, you might like these instruments:");
@@ -28,7 +29,7 @@ public class FindGuitarTester {
 
     private static void initializeInventory(Inventory inventory) {
         inventory.addInstrument("V95693", 1499.95, new GuitarSpec(Builder.FENDER, "Stratocaster", Type.ELECTRIC, Wood.ALDER, Wood.ALDER, 6));
-        inventory.addInstrument("V9512", 1549.95, new GuitarSpec(Builder.FENDER, "Stratocaster", Type.ELECTRIC, Wood.ALDER, Wood.MAPLE, 6));
+        inventory.addInstrument("V9512", 1549.95, new GuitarSpec(Builder.FENDER, "Stratocaster", Type.ELECTRIC, Wood.ALDER, Wood.ALDER, 6));
         inventory.addInstrument("122784", 5495.95, new GuitarSpec(Builder.MARTIN, "D-18", Type.ACOUSTIC, Wood.MAHOGANY, Wood.ADIRONDACK, 6));
         inventory.addInstrument("76531", 6295.95, new GuitarSpec(Builder.MARTIN, "OM-28", Type.ACOUSTIC, Wood.BRAZILIAN_ROSEWOOD, Wood.CEDAR, 6));
         inventory.addInstrument("70108276", 2295.95, new GuitarSpec(Builder.MARTIN, "OM-45", Type.ACOUSTIC, Wood.BRAZILIAN_ROSEWOOD, Wood.CEDAR, 6));

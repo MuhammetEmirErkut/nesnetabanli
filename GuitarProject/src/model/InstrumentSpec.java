@@ -35,7 +35,7 @@ public abstract class InstrumentSpec {
         if (builder != other.builder) {
             return false;
         }
-        if ((model != null && !model.equals(other.model)) || (model == null && other.model != null)) {
+        if (model != other.model) {
             return false;
         }
         if (type != other.type) {
