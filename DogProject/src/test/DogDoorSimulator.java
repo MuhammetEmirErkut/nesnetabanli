@@ -11,15 +11,15 @@ public class DogDoorSimulator {
     public static void main(String[] args) {
         DogDoor door = new DogDoor();
         
-        // Ceyhun'un havlamasını izin verilen havlama olarak ayarla
-        Bark ceyhunBark = new Bark("Woof");
-        door.setAllowedBark(ceyhunBark);
+        // Kopek'un havlamasını izin verilen havlama olarak ayarla
+        Bark KopekBark = new Bark("Woof");
+        door.setAllowedBark(KopekBark);
         
         BarkRecognizer recognizer = new BarkRecognizer(door);
         Remote remote = new Remote(door);
-        System.out.println("Ceyhun starts barking.");
+        System.out.println("Kopek starts barking.");
 
-        System.out.println("Ceyhuns all done...");
+        System.out.println("Kopeks all done...");
 
         try {
             Thread.sleep(1000);
@@ -29,12 +29,12 @@ public class DogDoorSimulator {
 
         remote.pressButton();
         
-        System.out.println("\nCeyhun stuck outside...");
+        System.out.println("\nKopek stuck outside...");
 
-        System.out.println("Ceyhun starts barking.");
+        System.out.println("Kopek starts barking.");
         recognizer.recognize("Woof");
 
-        System.out.println("Ceyhuns back inside...");
+        System.out.println("Kopeks back inside...");
 
         Bark smallDogBark = new Bark("Yip");
         System.out.println("A small dog starts barking.");
@@ -46,9 +46,9 @@ public class DogDoorSimulator {
             e.printStackTrace();
         }
 
-        System.out.println("\nCeyhun starts barking.");
+        System.out.println("\nKopek starts barking.");
         recognizer.recognize("Woof");
 
-        System.out.println("Ceyhuns back inside...");
+        System.out.println("Kopeks back inside...");
     }
 }
